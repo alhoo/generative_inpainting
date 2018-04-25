@@ -24,7 +24,7 @@ logger = logging.getLogger()
 
 class InpaintCAModel(Model):
     def __init__(self):
-        super().__init__('InpaintCAModel')
+        Model.__init__(self, 'InpaintCAModel')
 
     def build_inpaint_net(self, x, mask, config=None, reuse=False,
                           training=True, padding='SAME', name='inpaint_net'):
